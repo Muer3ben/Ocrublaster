@@ -152,7 +152,7 @@ public class Blaster {
     public void test(ArrayList arrayList) {
         byte[] bytearray = new byte[arrayList.size()];
         for (int i=0;i<arrayList.size();i++) {
-            bytearray[i] = arrayList.get(i);
+            bytearray[i] = (byte) arrayList.get(i);
         }
         int transfered = usbConnection.bulkTransfer(outEndpoint, bytearray, arrayList.size(), 100);
         sent = transfered;
